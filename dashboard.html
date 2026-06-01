@@ -14,57 +14,47 @@ font-family:Inter,Arial,sans-serif;
 }
 
 body{
-background:#050816;
-color:white;
-overflow-x:hidden;
-}
-
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
 background:
-radial-gradient(circle at 20% 20%,rgba(124,92,255,.25),transparent 40%),
-radial-gradient(circle at 80% 30%,rgba(0,200,255,.15),transparent 40%);
-z-index:-1;
-}
-
-header{
-padding:25px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-}
-
-.logo{
-font-size:2rem;
-font-weight:800;
-color:#8b6cff;
-}
-
-.connect-btn{
-padding:12px 24px;
-border:none;
-border-radius:10px;
-background:linear-gradient(135deg,#7c5cff,#b16cff);
+radial-gradient(circle at top left,#4f2db6,#050816 45%),
+radial-gradient(circle at bottom right,#00d4ff22,#050816 40%);
 color:white;
-font-weight:700;
-cursor:pointer;
-transition:.3s;
-}
-
-.connect-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 0 25px rgba(124,92,255,.6);
+min-height:100vh;
+padding:40px;
 }
 
 .container{
-padding:50px 5%;
+max-width:1400px;
+margin:auto;
+}
+
+.hero{
+text-align:center;
+margin-bottom:50px;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:800;
+background:linear-gradient(90deg,#8b5cf6,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:15px;
+color:#cbd5e1;
+font-size:1.1rem;
+}
+
+.connect{
+margin-top:25px;
+padding:14px 28px;
+background:linear-gradient(90deg,#8b5cf6,#7c3aed);
+border:none;
+border-radius:12px;
+color:white;
+font-size:1rem;
+cursor:pointer;
 }
 
 .grid{
@@ -74,175 +64,155 @@ gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.08);
-backdrop-filter:blur(15px);
-padding:28px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.08);
 border-radius:20px;
+padding:28px;
+transition:.3s;
 }
 
-.card h2{
+.card:hover{
+transform:translateY(-5px);
+}
+
+h2{
 margin-bottom:20px;
 }
 
 .score{
 font-size:5rem;
-font-weight:900;
-color:#8b6cff;
+font-weight:800;
+color:#8b5cf6;
 }
 
-.status{
-color:#5dff9d;
+.good{
+color:#4ade80;
+font-weight:700;
 margin-top:10px;
-font-weight:600;
 }
 
 .metric{
-margin-top:20px;
-}
-
-.metric label{
-display:block;
-margin-bottom:6px;
+margin-bottom:18px;
 }
 
 .bar{
 height:12px;
-background:#1b1f35;
-border-radius:10px;
+background:#1f2937;
+border-radius:999px;
 overflow:hidden;
+margin-top:8px;
 }
 
 .fill{
 height:100%;
-background:linear-gradient(90deg,#7c5cff,#b16cff);
+background:linear-gradient(90deg,#8b5cf6,#c084fc);
 }
 
 .badges{
 display:flex;
 flex-wrap:wrap;
 gap:10px;
-margin-top:15px;
 }
 
 .badge{
-padding:8px 14px;
+padding:10px 16px;
+border:1px solid #8b5cf6;
 border-radius:999px;
-background:rgba(124,92,255,.2);
-border:1px solid #8b6cff;
+color:#ddd;
 }
 
 .stats{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:15px;
-margin-top:15px;
 }
 
 .stat{
 background:#111827;
-padding:15px;
+padding:18px;
 border-radius:12px;
 }
 
 .stat h3{
-color:#8b6cff;
-font-size:1.8rem;
-margin-bottom:5px;
+font-size:2rem;
+color:#8b5cf6;
 }
 
-.activity li{
-margin:12px 0;
+ul{
+padding-left:20px;
+line-height:2;
 }
 
-.footer-btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 28px;
-background:linear-gradient(135deg,#7c5cff,#b16cff);
+.footer{
+text-align:center;
+margin-top:40px;
+}
+
+.footer a{
+padding:14px 30px;
+background:#8b5cf6;
 color:white;
 text-decoration:none;
-border-radius:10px;
-font-weight:700;
-}
-
-.wallet{
-font-size:1.2rem;
-color:#8b6cff;
-margin-top:10px;
-}
-
-.subtitle{
-color:#a7b0d0;
-margin-top:10px;
-}
-
-.hero{
-text-align:center;
-margin-bottom:40px;
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-.hero p{
-color:#b5bdd8;
-max-width:700px;
-margin:auto;
+border-radius:12px;
 }
 
 @media(max-width:768px){
+
 .hero h1{
-font-size:2rem;
+font-size:2.5rem;
 }
+
 .score{
 font-size:4rem;
 }
+
 }
 </style>
+
 </head>
-
 <body>
-
-<header>
-<div class="logo">TrustLayer OPN</div>
-<button class="connect-btn">🔗 Connect Wallet</button>
-</header>
 
 <div class="container">
 
 <div class="hero">
-<h1>Trust Infrastructure Dashboard</h1>
+<h1>TrustLayer OPN</h1>
+
 <p>
-Decentralized trust scoring, verification, and reputation analytics
-for users and projects across the OPN ecosystem.
+Decentralized Trust Infrastructure for OPN Chain.
+Trust scoring, reputation, verification and ecosystem analytics.
 </p>
+
+<button class="connect" onclick="connectWallet()">
+🔗 Connect Wallet
+</button>
+
+<p id="walletStatus" style="margin-top:15px;color:#94a3b8;">
+Wallet not connected
+</p>
+
 </div>
 
 <div class="grid">
 
 <div class="card">
 <h2>Trust Score</h2>
+
 <div class="score">92</div>
-<p class="status">✔ Verified Wallet</p>
-<p class="subtitle">Risk Level: Low</p>
+
+<p class="good">✔ Verified Wallet</p>
+<p>Risk Level: Low</p>
 </div>
 
 <div class="card">
 <h2>Wallet Reputation</h2>
 
-<p><strong>Wallet:</strong></p>
-<div class="wallet">0xEbAb...eaFF</div>
+<p><b>Wallet:</b> 0xEbAb...eaFF</p><br>
 
-<br>
-
-<p><strong>Transactions:</strong> 1,248</p>
-<p><strong>Projects Joined:</strong> 14</p>
-<p><strong>Governance Votes:</strong> 57</p>
-<p><strong>Account Age:</strong> 320 Days</p>
-
+<p><b>Transactions:</b> 1,248</p>
+<p><b>Projects Joined:</b> 14</p>
+<p><b>Governance Votes:</b> 57</p>
+<p><b>Account Age:</b> 320 Days</p>
 </div>
 
 <div class="card">
@@ -252,40 +222,39 @@ for users and projects across the OPN ecosystem.
 <div class="badge">Verified Wallet</div>
 <div class="badge">GitHub Linked</div>
 <div class="badge">Governance Member</div>
-<div class="badge">Early Builder</div>
 <div class="badge">Trusted User</div>
+<div class="badge">Early Builder</div>
 </div>
-
 </div>
 
 <div class="card">
 <h2>Trust Metrics</h2>
 
 <div class="metric">
-<label>Identity Verification</label>
+Identity Verification
 <div class="bar">
-<div class="fill" style="width:100%"></div>
+<div class="fill" style="width:95%"></div>
 </div>
 </div>
 
 <div class="metric">
-<label>Activity Score</label>
+Activity Score
 <div class="bar">
 <div class="fill" style="width:88%"></div>
 </div>
 </div>
 
 <div class="metric">
-<label>Community Score</label>
+Community Score
 <div class="bar">
 <div class="fill" style="width:90%"></div>
 </div>
 </div>
 
 <div class="metric">
-<label>Security Score</label>
+Security Score
 <div class="bar">
-<div class="fill" style="width:95%"></div>
+<div class="fill" style="width:93%"></div>
 </div>
 </div>
 
@@ -294,14 +263,13 @@ for users and projects across the OPN ecosystem.
 <div class="card">
 <h2>Recent Activity</h2>
 
-<ul class="activity">
+<ul>
 <li>Joined OPN Builders</li>
 <li>Completed On-chain Verification</li>
 <li>GitHub Linked</li>
-<li>Participated in Governance Vote</li>
+<li>Governance Participation</li>
 <li>Trust Profile Registered</li>
 </ul>
-
 </div>
 
 <div class="card">
@@ -330,18 +298,50 @@ for users and projects across the OPN ecosystem.
 </div>
 
 </div>
-
 </div>
 
 </div>
 
-<center>
-<a href="index.html" class="footer-btn">
-← Back to Landing Page
-</a>
-</center>
+<div class="footer">
+<a href="#">Launch Trust Registry</a>
+</div>
 
 </div>
+
+<script>
+async function connectWallet(){
+
+if(window.ethereum){
+
+try{
+
+const accounts =
+await ethereum.request({
+method:'eth_requestAccounts'
+});
+
+document.getElementById("walletStatus").innerHTML =
+"Connected: " +
+accounts[0].substring(0,6) +
+"..." +
+accounts[0].substring(38);
+
+}
+catch(err){
+
+document.getElementById("walletStatus").innerHTML =
+"Connection rejected";
+
+}
+
+}else{
+
+alert("MetaMask not detected");
+
+}
+
+}
+</script>
 
 </body>
 </html>
