@@ -1,37 +1,9 @@
-<script>
-async function connectWallet() {
-
-  if (!window.ethereum) {
-    alert(
-      "Please install an EVM wallet such as MetaMask, Rabby, OKX Wallet, Coinbase Wallet, Brave Wallet, or Phantom EVM."
-    );
-    return;
-  }
-
-  try {
-
-    const accounts = await window.ethereum.request({
-      method: "eth_requestAccounts"
-    });
-
-    const chainId = await window.ethereum.request({
-      method: "eth_chainId"
-    });
-
-    const address = accounts[0];
-
-    document.getElementById("walletStatus").innerHTML =
-      "Wallet Connected ✅<br>" +
-      address.substring(0, 6) +
-      "..." +
-      address.substring(address.length - 4) +
-      "<br>Chain ID: " + chainId;
-
-  } catch (err) {
-
-    document.getElementById("walletStatus").innerHTML =
-      "Connection rejected ❌";
-
-  }
-}
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard Test</title>
+</head>
+<body style="background:black;color:white;">
+<h1>Dashboard Works ✅</h1>
+</body>
+</html>
