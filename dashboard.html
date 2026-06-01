@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TrustLayer OPN Dashboard</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0b1020;
+    color:white;
+}
+
+header{
+    padding:20px 8%;
+    border-bottom:1px solid #222;
+}
+
+h1{
+    color:#8b5cf6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#151d34;
+    padding:25px;
+    border-radius:12px;
+}
+
+.score{
+    font-size:4rem;
+    color:#8b5cf6;
+    font-weight:bold;
+}
+
+.metric{
+    margin:12px 0;
+}
+
+.bar{
+    height:10px;
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    background:#8b5cf6;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    color:white;
+    text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>TrustLayer OPN Dashboard</h1>
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<h2>Trust Score</h2>
+<div class="score">92</div>
+<p>Verified Wallet</p>
+<p>Risk Level: Low</p>
+</div>
+
+<div class="card">
+<h2>Wallet Reputation</h2>
+<p><b>Wallet:</b> 0xEbAb...eaFF</p>
+<p><b>Transactions:</b> 1,248</p>
+<p><b>Projects Joined:</b> 14</p>
+<p><b>Account Age:</b> 320 Days</p>
+</div>
+
+<div class="card">
+<h2>Trust Metrics</h2>
+
+<div class="metric">
+Identity Verification
+<div class="bar"><div class="fill" style="width:100%"></div></div>
+</div>
+
+<div class="metric">
+Activity Score
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="metric">
+Community Score
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="metric">
+Security Score
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Recent Activity</h2>
+<ul>
+<li>Joined OPN Builders</li>
+<li>Completed On-chain Verification</li>
+<li>Governance Participation</li>
+<li>GitHub Linked</li>
+</ul>
+</div>
+
+</div>
+
+<a href="index.html" class="back">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
