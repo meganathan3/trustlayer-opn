@@ -1,146 +1,345 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TrustLayer OPN Dashboard</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,Arial,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#0b1020;
-    color:white;
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%,rgba(124,92,255,.25),transparent 40%),
+radial-gradient(circle at 80% 30%,rgba(0,200,255,.15),transparent 40%);
+z-index:-1;
 }
 
 header{
-    padding:20px 8%;
-    border-bottom:1px solid #222;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
 }
 
-h1{
-    color:#8b5cf6;
+.logo{
+font-size:2rem;
+font-weight:800;
+color:#8b6cff;
+}
+
+.connect-btn{
+padding:12px 24px;
+border:none;
+border-radius:10px;
+background:linear-gradient(135deg,#7c5cff,#b16cff);
+color:white;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.connect-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 0 25px rgba(124,92,255,.6);
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:40px 0;
+padding:50px 5%;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
 }
 
 .card{
-    background:#151d34;
-    padding:25px;
-    border-radius:12px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:28px;
+border-radius:20px;
+}
+
+.card h2{
+margin-bottom:20px;
 }
 
 .score{
-    font-size:4rem;
-    color:#8b5cf6;
-    font-weight:bold;
+font-size:5rem;
+font-weight:900;
+color:#8b6cff;
+}
+
+.status{
+color:#5dff9d;
+margin-top:10px;
+font-weight:600;
 }
 
 .metric{
-    margin:12px 0;
+margin-top:20px;
+}
+
+.metric label{
+display:block;
+margin-bottom:6px;
 }
 
 .bar{
-    height:10px;
-    background:#222;
-    border-radius:10px;
-    overflow:hidden;
+height:12px;
+background:#1b1f35;
+border-radius:10px;
+overflow:hidden;
 }
 
 .fill{
-    height:100%;
-    background:#8b5cf6;
+height:100%;
+background:linear-gradient(90deg,#7c5cff,#b16cff);
 }
 
-ul{
-    padding-left:20px;
+.badges{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
 }
 
-.back{
-    display:inline-block;
-    margin-top:20px;
-    color:white;
-    text-decoration:none;
+.badge{
+padding:8px 14px;
+border-radius:999px;
+background:rgba(124,92,255,.2);
+border:1px solid #8b6cff;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:15px;
+}
+
+.stat{
+background:#111827;
+padding:15px;
+border-radius:12px;
+}
+
+.stat h3{
+color:#8b6cff;
+font-size:1.8rem;
+margin-bottom:5px;
+}
+
+.activity li{
+margin:12px 0;
+}
+
+.footer-btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+background:linear-gradient(135deg,#7c5cff,#b16cff);
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:700;
+}
+
+.wallet{
+font-size:1.2rem;
+color:#8b6cff;
+margin-top:10px;
+}
+
+.subtitle{
+color:#a7b0d0;
+margin-top:10px;
+}
+
+.hero{
+text-align:center;
+margin-bottom:40px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#b5bdd8;
+max-width:700px;
+margin:auto;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2rem;
+}
+.score{
+font-size:4rem;
+}
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>TrustLayer OPN Dashboard</h1>
+<div class="logo">TrustLayer OPN</div>
+<button class="connect-btn">🔗 Connect Wallet</button>
 </header>
 
 <div class="container">
+
+<div class="hero">
+<h1>Trust Infrastructure Dashboard</h1>
+<p>
+Decentralized trust scoring, verification, and reputation analytics
+for users and projects across the OPN ecosystem.
+</p>
+</div>
 
 <div class="grid">
 
 <div class="card">
 <h2>Trust Score</h2>
 <div class="score">92</div>
-<p>Verified Wallet</p>
-<p>Risk Level: Low</p>
+<p class="status">✔ Verified Wallet</p>
+<p class="subtitle">Risk Level: Low</p>
 </div>
 
 <div class="card">
 <h2>Wallet Reputation</h2>
-<p><b>Wallet:</b> 0xEbAb...eaFF</p>
-<p><b>Transactions:</b> 1,248</p>
-<p><b>Projects Joined:</b> 14</p>
-<p><b>Account Age:</b> 320 Days</p>
+
+<p><strong>Wallet:</strong></p>
+<div class="wallet">0xEbAb...eaFF</div>
+
+<br>
+
+<p><strong>Transactions:</strong> 1,248</p>
+<p><strong>Projects Joined:</strong> 14</p>
+<p><strong>Governance Votes:</strong> 57</p>
+<p><strong>Account Age:</strong> 320 Days</p>
+
+</div>
+
+<div class="card">
+<h2>Verification Badges</h2>
+
+<div class="badges">
+<div class="badge">Verified Wallet</div>
+<div class="badge">GitHub Linked</div>
+<div class="badge">Governance Member</div>
+<div class="badge">Early Builder</div>
+<div class="badge">Trusted User</div>
+</div>
+
 </div>
 
 <div class="card">
 <h2>Trust Metrics</h2>
 
 <div class="metric">
-Identity Verification
-<div class="bar"><div class="fill" style="width:100%"></div></div>
+<label>Identity Verification</label>
+<div class="bar">
+<div class="fill" style="width:100%"></div>
+</div>
 </div>
 
 <div class="metric">
-Activity Score
-<div class="bar"><div class="fill" style="width:88%"></div></div>
+<label>Activity Score</label>
+<div class="bar">
+<div class="fill" style="width:88%"></div>
 </div>
-<a href="#" class="connect-btn">
-    🔗 Connect Wallet
-</a>
-<div class="metric">
-Community Score
-<div class="bar"><div class="fill" style="width:90%"></div></div>
 </div>
 
 <div class="metric">
-Security Score
-<div class="bar"><div class="fill" style="width:95%"></div></div>
+<label>Community Score</label>
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="metric">
+<label>Security Score</label>
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
 </div>
 
 </div>
 
 <div class="card">
 <h2>Recent Activity</h2>
-<ul>
+
+<ul class="activity">
 <li>Joined OPN Builders</li>
 <li>Completed On-chain Verification</li>
-<li>Governance Participation</li>
 <li>GitHub Linked</li>
+<li>Participated in Governance Vote</li>
+<li>Trust Profile Registered</li>
 </ul>
+
+</div>
+
+<div class="card">
+<h2>Ecosystem Statistics</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>12.5K</h3>
+<p>Verified Wallets</p>
+</div>
+
+<div class="stat">
+<h3>184</h3>
+<p>Projects Tracked</p>
+</div>
+
+<div class="stat">
+<h3>48K</h3>
+<p>Trust Records</p>
+</div>
+
+<div class="stat">
+<h3>99.9%</h3>
+<p>Network Health</p>
 </div>
 
 </div>
 
-<a href="index.html" class="back">← Back to Home</a>
+</div>
+
+</div>
+
+<center>
+<a href="index.html" class="footer-btn">
+← Back to Landing Page
+</a>
+</center>
 
 </div>
 
