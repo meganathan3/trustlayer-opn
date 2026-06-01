@@ -1,135 +1,349 @@
-/* style.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrustLayer OPN</title>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
-body {
-font-family: Arial, sans-serif;
-background: #0b1020;
-color: white;
-line-height: 1.6;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 8%;
+body{
+    font-family:Inter,Segoe UI,sans-serif;
+    background:#070b1a;
+    color:white;
+    line-height:1.6;
 }
 
-.logo {
-font-size: 1.5rem;
-font-weight: bold;
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.hero {
-min-height: 100vh;
-background: linear-gradient(135deg, #0b1020, #1d145f);
+header{
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(10px);
+    background:rgba(7,11,26,.85);
 }
 
-.hero-content {
-text-align: center;
-padding: 120px 10%;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.hero-content h1 {
-font-size: 3rem;
-margin-bottom: 20px;
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#7c5cff;
 }
 
-.hero-content p {
-max-width: 700px;
-margin: auto;
-color: #d1d5db;
+.nav-links{
+    display:flex;
+    gap:20px;
 }
 
-.hero-buttons {
-margin-top: 30px;
+.nav-links a{
+    color:white;
+    text-decoration:none;
 }
 
-.btn {
-display: inline-block;
-padding: 12px 24px;
-text-decoration: none;
-border-radius: 8px;
-margin: 5px;
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    radial-gradient(circle at top,#7c5cff33,transparent 40%),
+    linear-gradient(135deg,#070b1a,#101830);
 }
 
-.primary {
-background: #6d5efc;
-color: white;
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
 }
 
-.secondary {
-border: 1px solid white;
-color: white;
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#b8bfd9;
+    font-size:1.1rem;
 }
 
-.section {
-padding: 80px 10%;
+.buttons{
+    margin-top:35px;
 }
 
-.section h2 {
-text-align: center;
-margin-bottom: 40px;
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:10px;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
 }
 
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-gap: 20px;
+.primary{
+    background:#7c5cff;
+    color:white;
 }
 
-.card {
-background: #151d34;
-padding: 25px;
-border-radius: 12px;
+.secondary{
+    border:1px solid white;
+    color:white;
 }
 
-.dark {
-background: #101827;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-.steps {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-justify-content: center;
+section{
+    padding:100px 0;
 }
 
-.step {
-background: #151d34;
-padding: 25px;
-border-radius: 12px;
-width: 300px;
-text-align: center;
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:2.5rem;
 }
 
-.step span {
-font-size: 2rem;
-font-weight: bold;
-color: #6d5efc;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-.roadmap {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-justify-content: center;
+.card{
+    background:#11182d;
+    padding:30px;
+    border-radius:16px;
+    transition:.3s;
 }
 
-.roadmap-item {
-background: #151d34;
-padding: 25px;
-border-radius: 12px;
-width: 300px;
+.card:hover{
+    transform:translateY(-5px);
 }
 
-footer {
-text-align: center;
-padding: 30px;
-border-top: 1px solid #222;
+.card h3{
+    margin-bottom:15px;
+    color:#8c72ff;
 }
+
+.steps{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.step{
+    background:#11182d;
+    width:280px;
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.step-number{
+    font-size:2rem;
+    color:#7c5cff;
+    font-weight:bold;
+}
+
+.roadmap{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.roadmap-item{
+    background:#11182d;
+    padding:25px;
+    border-radius:16px;
+}
+
+.roadmap-item h3{
+    color:#7c5cff;
+    margin-bottom:15px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#b8bfd9;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">TrustLayer OPN</div>
+<div class="nav-links">
+<a href="#features">Features</a>
+<a href="#how">How It Works</a>
+<a href="#roadmap">Roadmap</a>
+</div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Trust Infrastructure for OPN Chain</h1>
+<p>
+TrustLayer OPN provides decentralized verification, transparency,
+and trust scoring for projects, users, and on-chain interactions
+across the OPN ecosystem.
+</p>
+
+<div class="buttons">
+<a href="https://github.com/meganathan3/trustlayer-opn" class="btn primary">
+GitHub Repository
+</a>
+
+<a href="#features" class="btn secondary">
+Learn More
+</a>
+</div>
+</div>
+</section>
+
+<section id="features">
+<div class="container">
+
+<h2 class="section-title">Core Features</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Trust Verification</h3>
+<p>
+Verify projects and participants using transparent on-chain records
+and immutable reputation metrics.
+</p>
+</div>
+
+<div class="card">
+<h3>Reputation Engine</h3>
+<p>
+Generate dynamic trust scores based on activity, history,
+and community validation.
+</p>
+</div>
+
+<div class="card">
+<h3>Open Transparency</h3>
+<p>
+Every verification event is recorded on-chain and publicly auditable.
+</p>
+</div>
+
+<div class="card">
+<h3>Developer Integration</h3>
+<p>
+Simple APIs and smart contract integrations for OPN ecosystem projects.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="how" style="background:#0d1426;">
+<div class="container">
+
+<h2 class="section-title">How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Register</h3>
+<p>Create a project profile and connect your wallet.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Verify</h3>
+<p>Submit credentials and on-chain proof records.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Score</h3>
+<p>TrustLayer calculates transparent trust metrics.</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>Share</h3>
+<p>Display trust badges and reputation across applications.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="roadmap">
+<div class="container">
+
+<h2 class="section-title">Roadmap</h2>
+
+<div class="roadmap">
+
+<div class="roadmap-item">
+<h3>Q2 2026</h3>
+<p>
+Launch MVP and initial trust verification smart contracts.
+</p>
+</div>
+
+<div class="roadmap-item">
+<h3>Q3 2026</h3>
+<p>
+Deploy reputation engine and public trust dashboards.
+</p>
+</div>
+
+<div class="roadmap-item">
+<h3>Q4 2026</h3>
+<p>
+Developer APIs and ecosystem integrations.
+</p>
+</div>
+
+<div class="roadmap-item">
+<h3>2027+</h3>
+<p>
+Cross-chain trust interoperability and advanced governance.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>
+© 2026 TrustLayer OPN • Building Trust for the Decentralized Future
+</p>
+</footer>
+
+</body>
+</html>
