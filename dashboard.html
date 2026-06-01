@@ -1,381 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrustLayer OPN Dashboard</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter,Arial,sans-serif;
-}
-
-body{
-background:
-radial-gradient(circle at top left,#4f2db6,#050816 45%),
-radial-gradient(circle at bottom right,#00d4ff22,#050816 40%);
-color:white;
-min-height:100vh;
-padding:40px;
-}
-
-.container{
-max-width:1400px;
-margin:auto;
-}
-
-.hero{
-text-align:center;
-margin-bottom:50px;
-}
-
-.hero h1{
-font-size:4rem;
-font-weight:800;
-background:linear-gradient(90deg,#8b5cf6,#06b6d4);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero p{
-margin-top:15px;
-color:#cbd5e1;
-font-size:1.1rem;
-}
-
-.connect{
-margin-top:25px;
-padding:14px 28px;
-background:linear-gradient(90deg,#8b5cf6,#7c3aed);
-border:none;
-border-radius:12px;
-color:white;
-font-size:1rem;
-cursor:pointer;
-}
-
-.connect:hover{
-opacity:.9;
-}
-
-#walletStatus{
-margin-top:15px;
-color:#94a3b8;
-line-height:1.8;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:20px;
-padding:28px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-h2{
-margin-bottom:20px;
-}
-
-.score{
-font-size:5rem;
-font-weight:800;
-color:#8b5cf6;
-}
-
-.good{
-color:#4ade80;
-font-weight:700;
-margin-top:10px;
-}
-
-.metric{
-margin-bottom:18px;
-}
-
-.bar{
-height:12px;
-background:#1f2937;
-border-radius:999px;
-overflow:hidden;
-margin-top:8px;
-}
-
-.fill{
-height:100%;
-background:linear-gradient(90deg,#8b5cf6,#c084fc);
-}
-
-.badges{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.badge{
-padding:10px 16px;
-border:1px solid #8b5cf6;
-border-radius:999px;
-color:#ddd;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
-
-.stat{
-background:#111827;
-padding:18px;
-border-radius:12px;
-}
-
-.stat h3{
-font-size:2rem;
-color:#8b5cf6;
-}
-
-ul{
-padding-left:20px;
-line-height:2;
-}
-
-.footer{
-text-align:center;
-margin-top:40px;
-}
-
-.footer a{
-padding:14px 30px;
-background:#8b5cf6;
-color:white;
-text-decoration:none;
-border-radius:12px;
-display:inline-block;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2.5rem;
-}
-
-.score{
-font-size:4rem;
-}
-
-.stats{
-grid-template-columns:1fr;
-}
-
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<div class="hero">
-
-<h1>TrustLayer OPN</h1>
-
-<p>
-Decentralized Trust Infrastructure for OPN Chain.
-Trust scoring, reputation, verification and ecosystem analytics.
-</p>
-
-<button class="connect" onclick="connectWallet()">
-🔗 Connect EVM Wallet
+<button id="connectBtn" class="connect">
+  🔗 Choose Wallet
 </button>
 
-<p id="walletStatus">
-Wallet not connected
-</p>
+<p id="walletStatus">Wallet not connected</p>
 
-</div>
+<script type="module">
+import { createWeb3Modal, defaultConfig } from
+'https://esm.sh/@web3modal/ethers5';
 
-<div class="grid">
+const projectId = 'YOUR_WALLETCONNECT_PROJECT_ID';
 
-<div class="card">
+const opnTestnet = {
+  chainId: 1337, // replace with actual OPN testnet chain ID
+  name: 'OPN Testnet',
+  currency: 'OPN',
+  explorerUrl: '',
+  rpcUrl: ''
+};
 
-<h2>Trust Score</h2>
+const metadata = {
+  name: 'TrustLayer OPN',
+  description: 'Trust Infrastructure for OPN',
+  url: window.location.origin,
+  icons: []
+};
 
-<div class="score">92</div>
+createWeb3Modal({
+  ethersConfig: defaultConfig({ metadata }),
+  chains: [opnTestnet],
+  projectId,
+  enableAnalytics: false
+});
 
-<p class="good">✔ Verified Wallet</p>
-<p>Risk Level: Low</p>
-
-</div>
-
-<div class="card">
-
-<h2>Wallet Reputation</h2>
-
-<p><b>Transactions:</b> 1,248</p>
-<p><b>Projects Joined:</b> 14</p>
-<p><b>Governance Votes:</b> 57</p>
-<p><b>Account Age:</b> 320 Days</p>
-
-</div>
-
-<div class="card">
-
-<h2>Verification Badges</h2>
-
-<div class="badges">
-
-<div class="badge">Verified Wallet</div>
-<div class="badge">GitHub Linked</div>
-<div class="badge">Governance Member</div>
-<div class="badge">Trusted User</div>
-<div class="badge">Early Builder</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Trust Metrics</h2>
-
-<div class="metric">
-Identity Verification
-<div class="bar">
-<div class="fill" style="width:95%"></div>
-</div>
-</div>
-
-<div class="metric">
-Activity Score
-<div class="bar">
-<div class="fill" style="width:88%"></div>
-</div>
-</div>
-
-<div class="metric">
-Community Score
-<div class="bar">
-<div class="fill" style="width:90%"></div>
-</div>
-</div>
-
-<div class="metric">
-Security Score
-<div class="bar">
-<div class="fill" style="width:93%"></div>
-</div>
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Recent Activity</h2>
-
-<ul>
-<li>Joined OPN Builders Program</li>
-<li>Completed On-chain Verification</li>
-<li>GitHub Linked</li>
-<li>Governance Participation</li>
-<li>Trust Profile Registered</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Ecosystem Statistics</h2>
-
-<div class="stats">
-
-<div class="stat">
-<h3>12.5K</h3>
-<p>Verified Wallets</p>
-</div>
-
-<div class="stat">
-<h3>184</h3>
-<p>Projects Tracked</p>
-</div>
-
-<div class="stat">
-<h3>48K</h3>
-<p>Trust Records</p>
-</div>
-
-<div class="stat">
-<h3>99.9%</h3>
-<p>Network Health</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="footer">
-
-<a href="index.html">
-← Back to Home
-</a>
-
-</div>
-
-</div>
-
-<script>
-async function connectWallet() {
-
-  if (!window.ethereum) {
-    alert(
-      "Please install MetaMask, Rabby, OKX Wallet, Coinbase Wallet, Brave Wallet, or another EVM wallet."
-    );
-    return;
-  }
-
+document.getElementById('connectBtn').addEventListener('click', async () => {
   try {
-
-    const accounts = await window.ethereum.request({
-      method: "eth_requestAccounts"
-    });
-
-    const chainId = await window.ethereum.request({
-      method: "eth_chainId"
-    });
-
-    const address = accounts[0];
-
-    document.getElementById("walletStatus").innerHTML =
-      "Wallet Connected ✅<br>" +
-      address.substring(0,6) +
-      "..." +
-      address.substring(address.length - 4) +
-      "<br>Chain ID: " + chainId;
-
-  } catch (error) {
-
-    document.getElementById("walletStatus").innerHTML =
-      "Connection Rejected ❌";
-
+    const modal = document.querySelector('w3m-button');
+  } catch (e) {
+    console.error(e);
   }
-}
+});
 </script>
 
-</body>
-</html>
+<w3m-button></w3m-button>
