@@ -2,73 +2,92 @@
 
 Decentralized Trust Infrastructure for OPN Chain.
 
-TrustLayer OPN enables wallet reputation scoring, verification badges, trust analytics, and transparent on-chain credibility for users, builders, and protocols within the OPN ecosystem.
+TrustLayer OPN is a reputation and trust protocol designed for the OPN ecosystem. It enables wallet reputation scoring, verification badges, trust analytics, and transparent on-chain credibility for users, builders, and protocols.
 
 ---
 
 ## Live Demo
 
-Landing Page:
+### Landing Page
 
 https://trustlayer-opn.vercel.app
 
-Dashboard:
+### Dashboard
 
 https://trustlayer-opn.vercel.app/dashboard.html
 
 ---
 
-## Problem
+## Overview
 
-Web3 ecosystems lack a unified trust and reputation layer.
+TrustLayer OPN aims to become a foundational trust layer for the OPN ecosystem by providing:
 
-Builders, users, and protocols often interact without visibility into wallet credibility, governance participation, ecosystem activity, and reputation history.
+* Wallet Reputation Profiles
+* Trust Scores
+* Verification Badges
+* On-Chain Trust Registry
+* Reputation Analytics Dashboard
+* Ecosystem Trust Infrastructure
 
-This creates challenges such as:
+The project was developed as part of the OPN Builders Programme.
 
-- Sybil attacks
-- Fake identities
-- Low-trust interactions
-- Reputation fragmentation
-- Difficult protocol onboarding
+---
+
+## Problem Statement
+
+Web3 ecosystems often lack a transparent reputation system.
+
+Protocols and users face challenges such as:
+
+* Difficulty evaluating wallet credibility
+* Lack of reputation visibility
+* Sybil attacks
+* Fake identities
+* Fragmented trust data
+* Limited transparency across applications
+
+TrustLayer addresses these challenges by creating a verifiable trust infrastructure built on OPN Chain.
 
 ---
 
 ## Solution
 
-TrustLayer OPN introduces a decentralized trust infrastructure that provides:
+TrustLayer provides a decentralized reputation layer where wallet activity, ecosystem participation, and verification status contribute to a transparent trust profile.
 
-- Wallet Reputation Profiles
-- Trust Scores
-- Verification Badges
-- On-chain Trust Registry
-- Reputation Analytics Dashboard
-
-All trust records are transparent and verifiable on OPN Chain.
-
----
-
-## Key Features
+Core components include:
 
 ### Trust Scores
 
-Generate reputation scores based on wallet activity, participation, and verification status.
+Generate reputation scores based on:
+
+* Transaction activity
+* Governance participation
+* Verification status
+* Ecosystem engagement
 
 ### Verification Badges
 
-Award badges to trusted ecosystem participants.
+Issue trust badges such as:
 
-### Trust Registry
+* Verified Wallet
+* Governance Member
+* GitHub Linked
+* Trusted User
+* Early Builder
 
-Store reputation records on-chain through smart contracts.
+### Trust Dashboard
 
-### Reputation Dashboard
+Visualize:
 
-Visualize trust metrics and ecosystem credibility.
+* Wallet reputation
+* Trust score
+* Activity metrics
+* Security metrics
+* Ecosystem statistics
 
-### Builder Identity Layer
+### On-Chain Registry
 
-Create verifiable reputation profiles for OPN builders.
+Store trust-related records through smart contracts deployed on OPN Chain.
 
 ---
 
@@ -77,9 +96,9 @@ Create verifiable reputation profiles for OPN builders.
 1. Connect an EVM-compatible wallet.
 2. Create a trust profile.
 3. Verify ecosystem participation.
-4. Generate trust scores.
+4. Generate a trust score.
 5. Earn verification badges.
-6. Build on-chain reputation.
+6. Build long-term reputation on OPN Chain.
 
 ---
 
@@ -105,38 +124,38 @@ OPN Chain
 
 ## Technology Stack
 
-Frontend
+### Frontend
 
-- HTML5
-- CSS3
-- JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
-Blockchain
+### Blockchain
 
-- Solidity
-- OPN Chain
-- EVM Wallet Integration
+* Solidity
+* OPN Chain
+* EVM Wallet Integration
 
-Deployment
+### Deployment
 
-- GitHub
-- Vercel
+* GitHub
+* Vercel
 
 ---
 
 ## Smart Contract
 
-Contract Name:
+### Contract Name
 
 TrustRegistry
 
-Contract Address:
+### Contract Address
 
 ```text
 0xAA388A886111B5C8cB738bcc23fBBd0b2BcE9201
 ```
 
-Network:
+### Network
 
 ```text
 OPN Chain
@@ -148,39 +167,40 @@ OPN Chain
 
 ### Wallet Connection
 
-Supports EVM-compatible wallets including:
+Supports EVM-compatible wallets:
 
-- MetaMask
-- Rabby
-- Coinbase Wallet
-- Brave Wallet
-- OKX Wallet
+* MetaMask
+* Rabby
+* Coinbase Wallet
+* Brave Wallet
+* OKX Wallet
+* Other EVM-compatible wallets
 
 ### Trust Score Engine
 
-Displays wallet trust score based on reputation metrics.
+Displays wallet reputation scores based on ecosystem participation and activity.
 
 ### Verification Badges
 
-- Verified Wallet
-- Governance Member
-- GitHub Linked
-- Trusted User
-- Early Builder
+* Verified Wallet
+* Governance Member
+* GitHub Linked
+* Trusted User
+* Early Builder
 
 ### Trust Metrics
 
-- Identity Verification
-- Activity Score
-- Community Score
-- Security Score
+* Identity Verification
+* Activity Score
+* Community Score
+* Security Score
 
 ### Ecosystem Statistics
 
-- Verified Wallets
-- Projects Tracked
-- Trust Records
-- Network Health
+* Verified Wallets
+* Projects Tracked
+* Trust Records
+* Network Health
 
 ---
 
@@ -188,23 +208,23 @@ Displays wallet trust score based on reputation metrics.
 
 ### Landing Page
 
-(Add Screenshot Here)
+*Add screenshot here*
 
-### Trust Dashboard
+### Dashboard
 
-(Add Screenshot Here)
+*Add screenshot here*
 
 ### Wallet Connected
 
-(Add Screenshot Here)
+*Add screenshot here*
 
-### Contract Deployment
+### Smart Contract Deployment
 
-(Add Screenshot Here)
+*Add screenshot here*
 
 ### OPN Builder Submission
 
-(Add Screenshot Here)
+*Add screenshot here*
 
 ---
 
@@ -212,51 +232,40 @@ Displays wallet trust score based on reputation metrics.
 
 ### Phase 1 (Current)
 
-- Trust Registry Deployment
-- Wallet Reputation Profiles
-- Trust Dashboard
-- Verification Badges
-- Trust Score MVP
+* Trust Registry Deployment
+* Wallet Reputation Profiles
+* Trust Dashboard MVP
+* Verification Badges
+* Trust Score Generation
 
 ### Phase 2
 
-- Governance Reputation
-- Protocol Reputation Profiles
-- Ecosystem Trust Graph
-- Advanced Analytics
+* Governance Reputation
+* Protocol Reputation Profiles
+* Cross-Project Trust Graph
+* Advanced Analytics Dashboard
 
 ### Phase 3
 
-- AI-Powered Trust Insights
-- Cross-Chain Reputation
-- DeFi Risk Assessment
-- Portable Web3 Identity
-
----
-
-## OPN Builders Programme
-
-Submitted to the OPN Builders Programme.
-
-Category:
-
-Identity & Reputation
-
-TrustLayer OPN aligns with OPN's vision for verifiable credentials, decentralized identity, and transparent reputation infrastructure.
+* AI-Powered Trust Insights
+* Cross-Chain Reputation
+* DeFi Risk Infrastructure
+* Portable Web3 Identity Layer
 
 ---
 
 ## Future Vision
 
-TrustLayer aims to become the foundational trust layer for the OPN ecosystem.
+TrustLayer aims to become the trust infrastructure layer of the OPN ecosystem.
 
-The long-term goal is to provide:
+Long-term objectives include:
 
-- Wallet Reputation Infrastructure
-- Protocol Trust Scores
-- Governance Reputation
-- Cross-Application Identity
-- Open Finance Risk Assessment
+* Wallet Reputation Infrastructure
+* Governance Reputation Systems
+* Protocol Trust Scores
+* Risk Assessment Frameworks
+* Cross-Application Identity
+* Open Finance Reputation Networks
 
 ---
 
@@ -277,6 +286,16 @@ trustlayer-opn
     ├── contract.png
     └── submission.png
 ```
+
+---
+
+## OPN Builders Programme
+
+Category:
+
+**Identity & Reputation**
+
+TrustLayer OPN aligns with OPN's vision of verifiable credentials, decentralized identity, and transparent reputation infrastructure.
 
 ---
 
